@@ -15,4 +15,12 @@ public class DepartmentService {
 
 	}
 
+	public void saveOurUpdate(Department obj) {
+		if (obj.getId() == null) {
+			dao.insert(obj);
+		} else {
+			dao.update(obj);
+		}
+	}
+
 }
